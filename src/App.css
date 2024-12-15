@@ -1,0 +1,341 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #1DB954;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  margin-left: 10px;
+  color: white;
+}
+
+.menu-icon {
+  display: none; /* Ocultar ícone no desktop */
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.playlist {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #282828;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  width: 170px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Mostrar ícone no mobile */
+  }
+
+  .nav {
+    display: none; /* Ocultar nav por padrão no mobile */
+    flex-direction: column;
+    background-color: #1DB954;
+    position: absolute;
+    top: 60px; /* Altura do cabeçalho */
+    right: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .nav.open {
+    display: flex; /* Mostrar nav quando aberto */
+  }
+
+  .nav ul {
+    flex-direction: column; /* Empilhar itens no mobile */
+  }
+
+  .nav li {
+    margin: 10px 0; /* Margem entre itens */
+  }
+}
+
+/* Adicione ao final do arquivo App.css */
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.search-button, .voice-button {
+  background-color: #1DB954;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-button:hover, .voice-button:hover {
+  background-color: #1ed760;
+}
+
+.voice-button {
+  margin-left: 5px;
+}
+
+.spotify-logo {
+  width: 100px; /* Tamanho da logo */
+  height: 100px; /* Tamanho da logo */
+  border-radius: 50%; /* Forma circular */
+  background: linear-gradient(135deg, #1DB954 25%, transparent 25%) no-repeat,
+              linear-gradient(225deg, #1DB954 25%, transparent 25%) no-repeat,
+              #191414; /* Fundo escuro */
+  background-size: 50% 50%; /* Tamanho das linhas verdes */
+  position: relative;
+  margin: 20px auto; /* Centralizar */
+}
+
+.spotify-logo::before,
+.spotify-logo::after {
+  content: '';
+  position: absolute;
+  background-color: #1DB954; /* Verde do Spotify */
+  border-radius: 50%;
+}
+
+.spotify-logo::before {
+  width: 70%; /* Largura do círculo interno */
+  height: 70%; /* Altura do círculo interno */
+  top: 15%; /* Centralizar */
+  left: 15%; /* Centralizar */
+}
+
+.spotify-logo::after {
+  width: 80%; /* Largura do círculo externo */
+  height: 80%; /* Altura do círculo externo */
+  top: 10%; /* Centralizar */
+  left: 10%; /* Centralizar */
+}
+
+.btn-artista {
+	background-color: #4CAF50; /* Cor de fundo verde */
+	color: white; /* Cor do texto */
+	padding: 10px 10px; /* Espaçamento interno do botão */
+	text-align: center; /* Alinhar o texto ao centro */
+	text-decoration: none; /* Remover underline */
+	display: inline-block; /* Exibir como bloco em linha */
+	font-size: 16px; /* Tamanho da fonte */
+	border: none; /* Remover borda padrão */
+	border-radius: 5px; /* Bordas arredondadas */
+	cursor: pointer; /* Cursor como mãozinha */
+	transition: background-color 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Efeito de hover (quando o mouse passa sobre o botão) */
+.btn-artista:hover {
+	background-color: #45a049; /* Cor mais escura para o fundo */
+}
+
+/* Efeito de foco (quando o botão é clicado ou selecionado) */
+.btn-artista:focus {
+	outline: none; /* Remove a borda de foco padrão */
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Adiciona um brilho verde ao redor */
+}
+
+.footer {
+  background-color: #222; /* Cor de fundo preta menos escura */
+  color: #fff; /* Cor do texto */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .social-links a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .social-links a:hover {
+  color: #1DB954; /* Cor do ícone quando passar o mouse */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.footer-links ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: #1DB954;
+}
+
+/* página do artist page */
+
+.artist-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: transparent; /* Fundo transparente */
+  color: white; /* Cor do texto preta */
+}
+
+.artist-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.artist-info h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.artist-info img {
+  max-width: 300px;
+  border-radius: 30px; /* Cantos arredondados de 30px na imagem */
+  margin-top: 10px;
+}
+
+.artist-songs {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente suave */
+  padding: 20px;
+  border-radius: 30px; /* Cantos arredondados de 30px */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.artist-songs h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 5px;
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.play-pause-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white; /* Cor do ícone */
+  font-size: 1.5rem;
+}
+
+
+/* Responsividade: Ajusta o layout para telas pequenas */
+@media (max-width: 600px) {
+  .artist-info, .artist-songs {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .artist-info img {
+    max-width: 150px;
+  }
+}
+
+
+/* Estilizando o botão de voltar */
+.back-button {
+  background-color: #1db954;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px; /* Cantos arredondados */
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #1aa34a; /* Cor mais escura no hover */
+}
+

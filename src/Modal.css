@@ -1,0 +1,85 @@
+/* Estilo para o overlay do modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com opacidade */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que o modal esteja acima de outros elementos */
+  visibility: hidden; /* Inicialmente escondido */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Modal ativo */
+.modal-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Estilo para o conteúdo do modal */
+.modal-content {
+  background-color: #fff;
+  display: flex;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 1000px;
+  z-index: 1010; /* Garante que o conteúdo do modal esteja acima do overlay */
+  transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+/* A parte esquerda do modal com a foto do artista */
+.modal-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+/* A foto do artista */
+.artist-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* A parte direita do modal com a lista de músicas */
+.modal-right {
+  flex: 2;
+  padding-left: 20px;
+}
+
+/* Remover o estilo da lista */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo para cada item de música */
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
