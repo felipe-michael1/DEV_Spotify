@@ -57,5 +57,3 @@ Certifique-se de ter **Node.js** e **npm** (ou **yarn**) instalados na sua máqu
     ```
 
 5. Abra o navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar o projeto.
-
-## Obrigado! Caso tenha algum dúvida, não hesite em entrar em contato comigo para maiores informações.
